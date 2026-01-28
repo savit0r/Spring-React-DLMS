@@ -1,0 +1,20 @@
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Java / Maven
+target/
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# Node / Frontend
+node_modules/
+build/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
