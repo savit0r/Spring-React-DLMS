@@ -50,4 +50,23 @@ public class CourseServiceImpl implements CourseService {
         }
         return false;
     }
+
+    @Override
+    public Course updateCourse(int courseId, CourseCreateRequest request) {
+        Optional<Course> courseOptional = courseRepository.findByCourseId(courseId);
+        if (courseOptional.isPresent()) {
+            Course existingCourse = courseOptional.get();
+            // Map updates from request
+            Course updatedData = CourseMapper.toEntity(request);
+
+            // Preserve ID and Create Date
+            updatedData.setId(existingCourse.getId());
+            updatedData.setCourseId(existingCourse.getCourseId());
+            updatedData.setCreatedAt(existingCourse.getCreatedAt());
+            updatedData.setUpdatedAt(LocalDateTime.now());
+
+            return courseRepository.save(updatedData);
+        }
+        return null;
+    }
 }

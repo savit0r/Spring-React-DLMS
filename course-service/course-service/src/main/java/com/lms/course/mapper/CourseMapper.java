@@ -62,6 +62,11 @@ public class CourseMapper {
         response.setCourseId(course.getCourseId());
         response.setTitle(course.getTitle());
         response.setDescription(course.getDescription());
+        response.setFullDescription(course.getFullDescription());
+        response.setDuration(course.getDuration());
+        response.setLevel(course.getLevel());
+        response.setPrerequisites(course.getPrerequisites());
+        response.setLearningOutcomes(course.getLearningOutcomes());
         response.setInstructor(course.getInstructor());
         response.setModules(toResponseModules(course.getModules()));
         response.setCreatedAt(course.getCreatedAt());

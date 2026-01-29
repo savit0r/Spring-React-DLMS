@@ -15,4 +15,6 @@ public interface CourseService {
     Optional<CourseResponse> getCourseByCourseId(int courseId);
 
     boolean deleteCourse(int courseId);
+
+    Course updateCourse(int courseId, CourseCreateRequest request);
 }

@@ -13,6 +13,11 @@ public class Course {
     private int courseId;
     private String title;
     private String description;
+    private String fullDescription; // New
+    private String duration; // New
+    private String level; // New
+    private List<String> prerequisites; // New
+    private List<String> learningOutcomes; // New
     private String instructor;
     private List<CourseModule> modules;
     private LocalDateTime createdAt;
@@ -83,5 +88,45 @@ public class Course {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getFullDescription() {
+        return fullDescription;
+    }
+
+    public void setFullDescription(String fullDescription) {
+        this.fullDescription = fullDescription;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public List<String> getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(List<String> prerequisites) {
+        this.prerequisites = prerequisites;
+    }
+
+    public List<String> getLearningOutcomes() {
+        return learningOutcomes;
+    }
+
+    public void setLearningOutcomes(List<String> learningOutcomes) {
+        this.learningOutcomes = learningOutcomes;
     }
 }

@@ -7,6 +7,11 @@ public class CourseResponse {
     private int courseId;
     private String title;
     private String description;
+    private String fullDescription;
+    private String duration;
+    private String level;
+    private List<String> prerequisites;
+    private List<String> learningOutcomes;
     private String instructor;
     private List<CourseModuleResponse> modules;
     private LocalDateTime createdAt;
@@ -37,6 +42,46 @@ public class CourseResponse {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getFullDescription() {
+        return fullDescription;
+    }
+
+    public void setFullDescription(String fullDescription) {
+        this.fullDescription = fullDescription;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public List<String> getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(List<String> prerequisites) {
+        this.prerequisites = prerequisites;
+    }
+
+    public List<String> getLearningOutcomes() {
+        return learningOutcomes;
+    }
+
+    public void setLearningOutcomes(List<String> learningOutcomes) {
+        this.learningOutcomes = learningOutcomes;
     }
 
     public String getInstructor() {

@@ -46,4 +46,13 @@ public class CourseController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @PutMapping("/{courseId}")
+    public ResponseEntity<Course> updateCourse(@PathVariable int courseId, @RequestBody CourseCreateRequest request) {
+        Course updatedCourse = courseService.updateCourse(courseId, request);
+        if (updatedCourse != null) {
+            return ResponseEntity.ok(updatedCourse);
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
