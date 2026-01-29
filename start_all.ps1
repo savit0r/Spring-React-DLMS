@@ -1,7 +1,0 @@
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'EurekaServer'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'Gateway'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'DLMSAuth\AuthService'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'course-service\course-service'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'enrollment-service\enrollment-service'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'MediaService'; .\mvnw spring-boot:run"
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd 'DLMSFrontend\DLMSFrontend'; npm start"
